@@ -5,9 +5,148 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
+
+html,body
+{
+  overflow-x: hidden;
+
+}
+
+body::-webkit-scrollbar
+{
+  display: none;
+}
+
+.flex
+{
+  display: flex;
+}
+.column{
+
+  flex-direction: column;
+}
+
+.j-between
+{
+  justify-content: space-between;
+}
+
+.j-center
+{
+  justify-content: center;
+}
+.a-center
+{
+  align-items: center;
+}
+
+.story-card
+{
+  background: transparent;
+  border-bottom: 8px solid #222;
+  color: #fff;
+  margin-bottom: 0;
+  padding: 50px 5%;
+  position: relative;
+}
+
+
+.story-card .animation-card
+{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.story-text{
+  flex: 0 1 auto;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 52%;
+    z-index: 3;
+}
+
+.card-title
+{
+  font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle
+{
+  font-size: 1.625rem;
+    font-weight: 400;
+}
+
+.animation-card .img-container
+{
+  box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    height: 100%;
+    width: 48%;
+}
+
+.animation-card .animation-container
+{
+  margin: -9% -5% -5% 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img
+{
+  position: relative;
+  z-index: 2;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
+.card-animation{
+  height: 100%;
+    left: 50%;
+    max-height: 54%;
+    max-width: 73%;
+    position: absolute;
+    top: 46%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.card-video
+{
+  height: 100%;
+    width: 100%;
+}
+
+video{
+  object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.flipped{
+  flex-flow: row-reverse;
+  /* padding: 0 0 0 3rem; */
+
+}
+
+.flipped .story-text{
+  padding: 0 0 0 3rem;
+}
+
+
+
