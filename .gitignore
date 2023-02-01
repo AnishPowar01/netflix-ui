@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#media file
+src/assets/Stranger.mp4
+src/assets/1564676115-marvel.mp4
