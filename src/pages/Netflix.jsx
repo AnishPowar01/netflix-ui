@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
 import BackgroundImage from '../assets/home.jpg';
 import MovieLogo from "../assets/homeTitle.webp";
@@ -6,11 +6,22 @@ import {FaPlay} from "react-icons/fa";
 import {AiOutlineInfoCircle} from "react-icons/ai";
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getGenres } from '../store';
 
 function Netflix() {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate()
+
+//getGenres
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(getGenres())
+  })
+
+  //scroll effect on navbar
 
   window.onscroll = () =>{
     setIsScrolled(window.pageYOffset===0? false:true);
